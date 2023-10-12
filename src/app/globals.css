@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html, body {
+        overflow: hidden;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
