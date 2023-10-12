@@ -1,9 +1,10 @@
+import UIProvider from "@/components/providers/UIProvider";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-
-import Header from "./components/common/Header";
-import UIProvider from "./components/providers/UIProvider";
+import NavBar from "@/components/common/NavBar";
+import { Toaster } from "react-hot-toast";
+import SideBar from "@/components/common/SideBar";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -23,8 +24,13 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <div className="flex flex-col min-h-screen bg-gradient-to-b from-white to-gray-100 dark:from-neutral-400 dark:to-neutral-500 montserrat.className">
           <UIProvider>
-            <Header />
-            <main className="flex-grow">{children}</main>
+            <Toaster position="bottom-center" reverseOrder={false} gutter={5} />
+            <NavBar />
+            <div className="grid grid-cols-1 sm:grid-cols-[220px,1fr] overflow-auto">
+              <SideBar />
+
+              <main className="flex-grow p-4">{children}</main>
+            </div>
           </UIProvider>
         </div>
       </body>
