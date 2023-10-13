@@ -126,7 +126,7 @@ const Discover = () => {
       className="max-h-[calc(100vh-77px)] min-h-[calc(100vh-77px)] overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-thumb-[#22222a] scrollbar-track-white relative"
       ref={mainRef}
     >
-      <h2 className="text-2xl tracking-tighter font-semibold">{title}</h2>
+      <h2 className="text-2xl tracking-tighter font-semibold text-center">{title}</h2>
       {movies.length === 0 && <Loading />}
 
       <section className="flex flex-wrap items-center justify-center gap-y-4 py-5">

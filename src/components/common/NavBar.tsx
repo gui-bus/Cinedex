@@ -113,12 +113,20 @@ export default function NavBar() {
       });
     }
 
+    const query = input.replace(/ /g, "-");
+
     setInput("");
-    router.push(`/search/${input}?page=1`);
+
+    router.push(`/search/${query}?page=1`);
+    setIsMenuOpen(false);
   };
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="drop-shadow-lg">
+    <Navbar
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      className="drop-shadow-lg"
+    >
       {/* Logo */}
       <NavbarContent justify="start">
         <NavbarBrand>

@@ -4,7 +4,7 @@ import { CiImageOff } from "react-icons/ci";
 const CardSkeleton = ({ error }: { error?: boolean }) => {
   return (
     <div
-      className={`w-full h-auto p-5 grid place-items-center mx-auto bg-foreground-300/20 rounded-xl ${
+      className={`w-full h-auto p-5 grid place-items-center mx-auto bg-foreground-300 rounded-xl ${
         !error && "cardSkeleton"
       }`}
     >
