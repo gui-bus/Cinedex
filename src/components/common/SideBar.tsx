@@ -27,7 +27,6 @@ const SideBar = ({ className }: any) => {
           `${BASE_URL}/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=pt-BR`
         );
         setGenres(response.data.genres);
-        console.log(response.data.genres);
       } catch (err) {
         console.log("Erro(NavBar): " + err);
       }
@@ -52,34 +51,24 @@ const SideBar = ({ className }: any) => {
   }, [searchParams, params.id]);
 
   return (
-    <div className="shadow-lg h-screen pt-3 hidden sm:block">
+    <div className="shadow-lg h-screen pt-3 hidden sm:block bg-gradient-to-b from-white to-gray-100 dark:from-neutral-800 dark:to-neutral-900">
       <div className="text-center">
         <div className="px-3 py-2">
           <h2 className="mb-2 text-lg font-semibold tracking-tight">
             Descubra
           </h2>
           <div className="space-y-1">
-            <Button
-              variant="ghost"
-              className="w-full"
-              onClick={() => router.push("/discover/popular")}
-              size="sm"
-            >
+            <Button variant="ghost" className="w-full" size="sm">
               <Link
                 color="foreground"
                 className="w-full text-tiny justify-center hover:bg-zinc-400/20 p-2 rounded-lg"
-                href="/discover/now"
+                href="/discover/now_playing"
                 size="lg"
               >
                 Em cartaz
               </Link>
             </Button>
-            <Button
-              variant="ghost"
-              className="w-full"
-              onClick={() => router.push("/discover/popular")}
-              size="sm"
-            >
+            <Button variant="ghost" className="w-full" size="sm">
               <Link
                 color="foreground"
                 className="w-full text-tiny justify-center hover:bg-zinc-400/20 p-2 rounded-lg"
@@ -89,27 +78,17 @@ const SideBar = ({ className }: any) => {
                 Populares
               </Link>
             </Button>
-            <Button
-              variant="ghost"
-              className="w-full"
-              onClick={() => router.push("/discover/popular")}
-              size="sm"
-            >
+            <Button variant="ghost" className="w-full" size="sm">
               <Link
                 color="foreground"
                 className="w-full text-tiny justify-center hover:bg-zinc-400/20 p-2 rounded-lg"
-                href="/discover/now"
+                href="/discover/top_rated"
                 size="lg"
               >
                 Melhores avaliações
               </Link>
             </Button>
-            <Button
-              variant="ghost"
-              className="w-full"
-              onClick={() => router.push("/discover/popular")}
-              size="sm"
-            >
+            <Button variant="ghost" className="w-full" size="sm">
               <Link
                 color="foreground"
                 className="w-full text-tiny justify-center hover:bg-zinc-400/20 p-2 rounded-lg "

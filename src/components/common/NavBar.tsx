@@ -81,7 +81,6 @@ export default function NavBar() {
           `${BASE_URL}/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=pt-BR`
         );
         setGenres(response.data.genres);
-        console.log(response.data.genres);
       } catch (err) {
         console.log("Erro(NavBar): " + err);
       }
@@ -97,8 +96,8 @@ export default function NavBar() {
 
       if (genreQueryParam) {
         setSelectedGenre(genreQueryParam);
-      } else {
-        setSelectedGenre(idParam.toString());
+      } else if (params.id !== undefined && params.id !== "") {
+        setSelectedGenre(params.id.toString());
       }
     };
 
@@ -123,7 +122,7 @@ export default function NavBar() {
       {/* Logo */}
       <NavbarContent justify="start">
         <NavbarBrand>
-          <Link href="/">
+          <Link href="/discover/now_playing">
             <div className="relative w-28 h-20 md:w-36 mr-4">
               <Image
                 src="/cinedex.png"
