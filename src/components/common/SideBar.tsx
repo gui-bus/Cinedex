@@ -81,21 +81,21 @@ const SideBar = ({ className }: any) => {
             <Button variant="ghost" className="w-full" size="sm">
               <Link
                 color="foreground"
-                className="w-full text-tiny justify-center hover:bg-zinc-400/20 p-2 rounded-lg"
-                href="/discover/top_rated"
+                className="w-full text-tiny justify-center hover:bg-zinc-400/20 p-2 rounded-lg "
+                href="/discover/upcoming"
                 size="lg"
               >
-                Melhores avaliações
+                Lançamentos
               </Link>
             </Button>
             <Button variant="ghost" className="w-full" size="sm">
               <Link
                 color="foreground"
-                className="w-full text-tiny justify-center hover:bg-zinc-400/20 p-2 rounded-lg "
-                href="/discover/upcoming"
+                className="w-full text-tiny justify-center hover:bg-zinc-400/20 p-2 rounded-lg"
+                href="/discover/top_rated"
                 size="lg"
               >
-                Próximos lançamentos
+                Melhores avaliações
               </Link>
             </Button>
           </div>
@@ -105,24 +105,23 @@ const SideBar = ({ className }: any) => {
           <h2 className="relative px-7 text-lg font-semibold tracking-tight">
             Gêneros
           </h2>
-          <ScrollArea className="h-[275px] px-1">
-            <div className="space-y-1 p-2">
-              {genres.map((genre: Igenre) => (
-                <p key={genre.id}>
-                  <Link
-                    color="foreground"
-                    className="w-full text-tiny justify-center hover:bg-zinc-400/20 p-2 rounded-lg "
-                    href={`/genres/${
-                      genre.id
-                    }?genre=${genre.name.toLocaleLowerCase()}`}
-                    size="lg"
-                  >
-                    {genre.name}
-                  </Link>
-                </p>
-              ))}
-            </div>
-          </ScrollArea>
+
+          <div className="h-72 space-y-1 p-2 overflow-y-scroll scrollbar-thin scrollbar-thumb-[#22222a] scrollbar-track-white">
+            {genres.map((genre: Igenre) => (
+              <p key={genre.id}>
+                <Link
+                  color="foreground"
+                  className="w-full text-tiny justify-center hover:bg-zinc-400/20 p-2 rounded-lg "
+                  href={`/genres/${
+                    genre.id
+                  }?genre=${genre.name.toLocaleLowerCase()}`}
+                  size="lg"
+                >
+                  {genre.name}
+                </Link>
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </div>
