@@ -9,9 +9,9 @@ import SideBar from "@/components/common/SideBar";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Cinedex | Seu catálogo definitivo de filmes e séries",
+  title: "Cinedex | Seu catálogo definitivo de filmes.",
   description:
-    "Explore uma vasta coleção de filmes, séries e muito mais com a Cinedex, a sua fonte confiável para informações.",
+    "Explore uma vasta coleção de filmes com a Cinedex, a sua fonte confiável para informações.",
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={montserrat.className}>
-        <div className="flex flex-col min-h-screen bg-gradient-to-b from-white to-gray-100 dark:from-neutral-400 dark:to-neutral-500">
+        <div className="flex flex-col min-h-screen bg-gradient-to-b from-stone-200 to-stone-300 dark:from-neutral-700 dark:to-neutral-900">
           <UIProvider>
             <Toaster position="bottom-center" reverseOrder={false} gutter={5} />
             <NavBar />
