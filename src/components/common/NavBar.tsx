@@ -122,41 +122,84 @@ export default function NavBar() {
   };
 
   return (
-    <Navbar
-      isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
-      className="drop-shadow-lg"
-    >
-      {/* Logo */}
-      <NavbarContent justify="start">
-        <NavbarBrand>
-          <Link href="/discover/now_playing">
-            <div className="relative w-28 h-20 md:w-36 mr-4">
-              <Image
-                src="/cinedex.png"
-                alt="Cinedex"
-                fill
-                style={{ objectFit: "contain" }}
-                priority
-              />
-            </div>
-          </Link>
-        </NavbarBrand>
-      </NavbarContent>
-
-      {/* Input Form */}
-      <NavbarContent
-        className="hidden sm:flex gap-4 w-full max-w-md px-4"
-        justify="center"
+    <header>
+      <Navbar
+        isMenuOpen={isMenuOpen}
+        onMenuOpenChange={setIsMenuOpen}
+        className="drop-shadow-lg bg-white dark:bg-[#2b2b2b]"
       >
-        <div className="hidden sm:block w-full">
+        {/* Logo */}
+        <NavbarContent justify="start">
+          <NavbarBrand>
+            <Link href="/discover/now_playing">
+              <div className="relative w-28 h-20 md:w-36 mr-4">
+                <Image
+                  src="/cinedex.png"
+                  alt="Cinedex"
+                  fill
+                  style={{ objectFit: "contain" }}
+                  priority
+                />
+              </div>
+            </Link>
+          </NavbarBrand>
+        </NavbarContent>
+
+        {/* Input Form */}
+        <NavbarContent
+          className="hidden sm:flex gap-4 w-full max-w-md px-4"
+          justify="center"
+        >
+          <div className="hidden sm:block w-full">
+            <form
+              className="flex items-center justify-center gap-2 w-full "
+              onSubmit={handleSubmit}
+            >
+              <Input
+                classNames={{
+                  base: "max-w-full h-10 ",
+                  mainWrapper: "h-full",
+                  input: "text-small",
+                  inputWrapper:
+                    "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
+                }}
+                placeholder="Pesquise por um filme ou série..."
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                autoComplete="off"
+                required
+              />
+              <Button
+                isIconOnly
+                startContent={<HiSearch size={18} />}
+                type="submit"
+                onSubmit={handleSubmit}
+                variant="shadow"
+              />
+            </form>
+          </div>
+        </NavbarContent>
+
+        {/* Theme Switch & Mobile Menu Toggle */}
+        <NavbarContent justify="end">
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            className="sm:hidden"
+          />
+          <Button onClick={toggleDarkMode} isIconOnly variant="shadow">
+            {isDarkMode ? <HiSun size={18} /> : <HiMoon size={18} />}
+          </Button>
+        </NavbarContent>
+
+        <NavbarMenu className="flex flex-col items-center text-center py-5">
           <form
-            className="flex items-center justify-center gap-2 w-full "
+            className="flex items-center justify-center gap-2 w-full"
             onSubmit={handleSubmit}
           >
             <Input
               classNames={{
-                base: "max-w-full h-10 ",
+                base: "max-w-full h-10",
                 mainWrapper: "h-full",
                 input: "text-small",
                 inputWrapper:
@@ -177,65 +220,83 @@ export default function NavBar() {
               variant="shadow"
             />
           </form>
-        </div>
-      </NavbarContent>
 
-      {/* Theme Switch & Mobile Menu Toggle */}
-      <NavbarContent justify="end">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
-        <Button onClick={toggleDarkMode} isIconOnly variant="shadow">
-          {isDarkMode ? <HiSun size={18} /> : <HiMoon size={18} />}
-        </Button>
-      </NavbarContent>
+          <Divider className="my-5" />
 
-      <NavbarMenu className="flex flex-col items-center text-center py-5">
-        <form
-          className="flex items-center justify-center gap-2 w-full"
-          onSubmit={handleSubmit}
-        >
-          <Input
-            classNames={{
-              base: "max-w-full h-10",
-              mainWrapper: "h-full",
-              input: "text-small",
-              inputWrapper:
-                "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
-            }}
-            placeholder="Pesquise por um filme ou série..."
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            autoComplete="off"
-            required
-          />
-          <Button
-            isIconOnly
-            startContent={<HiSearch size={18} />}
-            type="submit"
-            onSubmit={handleSubmit}
-            variant="shadow"
-          />
-        </form>
-        <Divider className="my-5" />
-        {genres.map((genre: Igenre) => (
-          <NavbarMenuItem key={genre.id}>
-            <Link
-              color="foreground"
-              className="w-full"
-              href={`/genres/${
-                genre.id
-              }?genre=${genre.name.toLocaleLowerCase()}`}
-              size="lg"
-              onClick={() => setIsMenuOpen(false)}
+          <div className="space-y-1 text-center flex flex-col justify-center items-center w-full">
+            <h2 className="mb-2 text-xl font-semibold tracking-tight">
+              Descubra
+            </h2>
+            <NavbarMenuItem className="hover:bg-stone-400/30 p-1 rounded-lg w-full">
+              <Link
+                color="foreground"
+                className="w-full justify-center"
+                href="/discover/now_playing"
+                size="lg"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Em cartaz
+              </Link>
+            </NavbarMenuItem>
+            <NavbarMenuItem className="hover:bg-stone-400/30 p-1 rounded-lg w-full">
+              <Link
+                color="foreground"
+                className="w-full justify-center"
+                href="/discover/popular"
+                size="lg"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Populares
+              </Link>
+            </NavbarMenuItem>
+            <NavbarMenuItem className="hover:bg-stone-400/30 p-1 rounded-lg w-full">
+              <Link
+                color="foreground"
+                className="w-full justify-center"
+                href="/discover/upcoming"
+                size="lg"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Lançamentos
+              </Link>
+            </NavbarMenuItem>
+            <NavbarMenuItem className="hover:bg-stone-400/30 p-1 rounded-lg w-full">
+              <Link
+                color="foreground"
+                className="w-full justify-center"
+                href="/discover/top_rated"
+                size="lg"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Melhores avaliações
+              </Link>
+            </NavbarMenuItem>
+          </div>
+
+          <Divider className="my-5" />
+          <h2 className="mb-2 text-xl font-semibold tracking-tight">
+            Gêneros
+          </h2>
+          {genres.map((genre: Igenre) => (
+            <NavbarMenuItem
+              key={genre.id}
+              className="hover:bg-stone-400/30 p-1 rounded-lg w-full"
             >
-              {genre.name}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
-    </Navbar>
+              <Link
+                color="foreground"
+                className="w-full justify-center"
+                href={`/genres/${
+                  genre.id
+                }?genre=${genre.name.toLocaleLowerCase()}`}
+                size="lg"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {genre.name}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
+      </Navbar>
+    </header>
   );
 }
