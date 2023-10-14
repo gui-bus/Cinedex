@@ -26,13 +26,13 @@ export default function MovieCard({
       const [year, month, day] = date.split("-");
       return `${day}/${month}/${year}`;
     }
-    return "??/??/????";
+    return "Não informado";
   };
 
   const formattedReleaseDate = formatBrDate(release_date);
 
   return (
-    <div className="group w-full md:w-52 h-auto gap-2 px-2">
+    <div className="group w-full md:w-52 h-auto gap-2 px-2 transition-all duration-250 ease-out hover:scale-105">
       {!loaded && !error && <CardSkeleton />}
       {error && <CardSkeleton error />}
 
@@ -49,7 +49,7 @@ export default function MovieCard({
             onError={() => setError(true)}
           />
 
-          <div className="absolute w-full bottom-0 px-4 py-2 text-center transition-all duration-500 opacity-0 group-hover:opacity-100 z-50 bg-white text-black rounded-b-xl">
+          <div className="absolute w-full bottom-0 px-4 py-2 text-center transition-all duration-500 opacity-0 group-hover:opacity-100 z-50 dark:bg-white bg-[#2b2b2b] text-white dark:text-black rounded-b-xl">
             {title}
             <p>{formattedReleaseDate}</p>
           </div>
