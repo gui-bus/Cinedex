@@ -167,7 +167,7 @@ const MovieDetails = () => {
 
   const hours = Math.floor(runtime! / 60);
   const minutes = (runtime! % 60).toFixed(0).padStart(2, "0");
-
+  
   return (
     <main
       className="p-8 relative max-h-[calc(100vh-77px)] min-h-[calc(100vh-77px)] overflow-y-scroll scrollbar-thin scrollbar-thumb-[#22222a] scrollbar-track-white"
