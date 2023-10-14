@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="text-center font-light py-4 text-sm">
+    <footer className="text-center font-light py-4 text-sm">
       <p>
         &copy; {new Date().getFullYear()} - Cinedex | Todos os direitos
         reservados.
@@ -15,7 +15,7 @@ const Footer = () => {
           TMDB API
         </Link>
       </p>
-    </div>
+    </footer>
   );
 };
 
