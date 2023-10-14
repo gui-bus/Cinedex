@@ -114,7 +114,15 @@ const Search = () => {
       <h2 className="text-2xl tracking-tighter font-semibold text-center">
         {title}
       </h2>
-      {movies.length === 0 && <Loading />}
+      {movies.length === 0 && (
+        <>
+          <Loading />
+          <p className="flex items-center justify-center text-center">
+            Infelizmente não foi encontrado nenhum resultado para a sua
+            pesquisa.
+          </p>
+        </>
+      )}
 
       <section className="flex flex-wrap items-center justify-center gap-y-4 py-5">
         {movies.map((movie: Imovie) => (
@@ -148,6 +156,7 @@ const Search = () => {
               startContent={<MdKeyboardDoubleArrowLeft />}
               className="disabled:opacity-50"
               disabled
+              color="warning"
             />
           ) : (
             <Button
@@ -155,6 +164,7 @@ const Search = () => {
               variant="shadow"
               isIconOnly
               startContent={<MdKeyboardDoubleArrowLeft />}
+              color="warning"
             />
           )}
         </Tooltip>
@@ -173,6 +183,7 @@ const Search = () => {
               startContent={<MdKeyboardArrowLeft />}
               className="disabled:opacity-50"
               disabled
+              color="warning"
             />
           ) : (
             <Button
@@ -180,11 +191,14 @@ const Search = () => {
               variant="shadow"
               isIconOnly
               startContent={<MdKeyboardArrowLeft />}
+              color="warning"
             />
           )}
         </Tooltip>
 
-        <Button disabled>{currentPage}</Button>
+        <Button disabled color="warning">
+          {currentPage}
+        </Button>
 
         <Tooltip
           content="Avançar"
@@ -200,6 +214,7 @@ const Search = () => {
               startContent={<MdKeyboardArrowRight />}
               className="disabled:opacity-50"
               disabled
+              color="warning"
             />
           ) : (
             <Button
@@ -207,6 +222,7 @@ const Search = () => {
               variant="shadow"
               isIconOnly
               startContent={<MdKeyboardArrowRight />}
+              color="warning"
             />
           )}
         </Tooltip>
@@ -225,6 +241,7 @@ const Search = () => {
               startContent={<MdKeyboardDoubleArrowRight />}
               className="disabled:opacity-50"
               disabled
+              color="warning"
             />
           ) : (
             <Button
@@ -232,6 +249,7 @@ const Search = () => {
               variant="shadow"
               isIconOnly
               startContent={<MdKeyboardDoubleArrowRight />}
+              color="warning"
             />
           )}
         </Tooltip>

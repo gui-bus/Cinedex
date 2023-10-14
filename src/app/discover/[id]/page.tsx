@@ -3,7 +3,7 @@ import MovieCard from "@/components/Card";
 import Footer from "@/components/Footer";
 import Loading from "@/components/Loading";
 import { BASE_URL } from "@/utils/Const";
-import { Button, Tooltip } from "@nextui-org/react";
+import { Button, Divider, Tooltip } from "@nextui-org/react";
 import axios from "axios";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import React, { useRef, useState, useEffect } from "react";
@@ -50,19 +50,19 @@ const Discover = () => {
 
     switch (id) {
       case "now_playing":
-        setTitle("Em cartaz");
+        setTitle("Filmes em Cartaz");
         break;
 
       case "popular":
-        setTitle("Populares");
+        setTitle("Filmes Populares");
         break;
 
       case "top_rated":
-        setTitle("Melhores avaliações");
+        setTitle("Filmes mais bem avaliados");
         break;
 
       case "upcoming":
-        setTitle("Próximos lançamentos");
+        setTitle("Filmes que estreiam em breve");
         break;
 
       default:
@@ -126,7 +126,10 @@ const Discover = () => {
       className="max-h-[calc(100vh-77px)] min-h-[calc(100vh-77px)] overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-thumb-[#22222a] scrollbar-track-white relative"
       ref={mainRef}
     >
-      <h2 className="text-2xl tracking-tighter font-semibold text-center">{title}</h2>
+      <h2 className="text-2xl tracking-tighter font-semibold text-center">
+        {title}
+      </h2>
+      
       {movies.length === 0 && <Loading />}
 
       <section className="flex flex-wrap items-center justify-center gap-y-4 py-5">
@@ -161,6 +164,7 @@ const Discover = () => {
               startContent={<MdKeyboardDoubleArrowLeft />}
               className="disabled:opacity-50"
               disabled
+              color="warning"
             />
           ) : (
             <Button
@@ -168,6 +172,7 @@ const Discover = () => {
               variant="shadow"
               isIconOnly
               startContent={<MdKeyboardDoubleArrowLeft />}
+              color="warning"
             />
           )}
         </Tooltip>
@@ -186,6 +191,7 @@ const Discover = () => {
               startContent={<MdKeyboardArrowLeft />}
               className="disabled:opacity-50"
               disabled
+              color="warning"
             />
           ) : (
             <Button
@@ -193,11 +199,14 @@ const Discover = () => {
               variant="shadow"
               isIconOnly
               startContent={<MdKeyboardArrowLeft />}
+              color="warning"
             />
           )}
         </Tooltip>
 
-        <Button disabled>{currentPage}</Button>
+        <Button disabled color="warning">
+          {currentPage}
+        </Button>
 
         <Tooltip
           content="Avançar"
@@ -213,6 +222,7 @@ const Discover = () => {
               startContent={<MdKeyboardArrowRight />}
               className="disabled:opacity-50"
               disabled
+              color="warning"
             />
           ) : (
             <Button
@@ -220,6 +230,7 @@ const Discover = () => {
               variant="shadow"
               isIconOnly
               startContent={<MdKeyboardArrowRight />}
+              color="warning"
             />
           )}
         </Tooltip>
@@ -238,6 +249,7 @@ const Discover = () => {
               startContent={<MdKeyboardDoubleArrowRight />}
               className="disabled:opacity-50"
               disabled
+              color="warning"
             />
           ) : (
             <Button
@@ -245,6 +257,7 @@ const Discover = () => {
               variant="shadow"
               isIconOnly
               startContent={<MdKeyboardDoubleArrowRight />}
+              color="warning"
             />
           )}
         </Tooltip>
