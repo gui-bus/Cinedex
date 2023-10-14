@@ -114,7 +114,6 @@ const MovieDetails = () => {
         `${BASE_URL}/movie/${params.id}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&append_to_response=videos&language=pt-BR&region=BR`
       )
       .then((res) => {
-        console.log(res.data);
         setMovie(res.data);
       });
   }, [params.id]);

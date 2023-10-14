@@ -60,7 +60,6 @@ const Genres = () => {
         setMovies(response.data.results);
         setCurrentPage(response.data.page);
         setTotalPage(response.data.total_pages);
-        console.log(response.data);
       })
       .catch((error) => console.log(error));
 
