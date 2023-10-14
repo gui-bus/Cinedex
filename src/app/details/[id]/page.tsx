@@ -167,7 +167,7 @@ const MovieDetails = () => {
 
   const hours = Math.floor(runtime! / 60);
   const minutes = (runtime! % 60).toFixed(0).padStart(2, "0");
-  
+
   return (
     <main
       className="p-8 relative max-h-[calc(100vh-77px)] min-h-[calc(100vh-77px)] overflow-y-scroll scrollbar-thin scrollbar-thumb-[#22222a] scrollbar-track-white"
@@ -301,16 +301,16 @@ const MovieDetails = () => {
           showPlayer ? "opacity-100 z-50" : "opacity-0 -z-10"
         }`}
       >
-        <div className="flex items-center justify-between bg-black text-[f9f9f9] p-3.5">
+        <div className="flex items-center justify-between text-white bg-black p-3.5">
           <span className="font-semibold">
             Confira o trailer de {movie?.title}
           </span>
-          <div
-            className="cursor-pointer w-8 h-8 flex justify-center items-center rounded-lg opacity-50 hover:opacity-75 hover:bg-[#0f0f0f]"
+          <Button
             onClick={() => setShowPlayer(false)}
-          >
-            <HiXCircle size={24} />
-          </div>
+            isIconOnly
+            startContent={<HiXCircle size={24} />}
+            size="sm"
+          ></Button>
         </div>
 
         <div className="relative pt-[56.25%]">
