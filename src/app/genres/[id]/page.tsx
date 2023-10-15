@@ -105,7 +105,9 @@ const Genres = () => {
       className="max-h-[calc(100vh-77px)] min-h-[calc(100vh-77px)] overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-thumb-[#22222a] scrollbar-track-white relative"
       ref={mainRef}
     >
-      <h2 className="text-2xl tracking-tighter font-semibold text-center">{title}</h2>
+      <h2 className="text-2xl tracking-tighter font-semibold text-center">
+        {title}
+      </h2>
       {movies.length === 0 && <Loading />}
 
       <section className="flex flex-wrap items-center justify-center gap-y-4 py-5">
@@ -140,6 +142,7 @@ const Genres = () => {
               startContent={<MdKeyboardDoubleArrowLeft />}
               className="disabled:opacity-50"
               disabled
+              color="warning"
             />
           ) : (
             <Button
@@ -147,6 +150,7 @@ const Genres = () => {
               variant="shadow"
               isIconOnly
               startContent={<MdKeyboardDoubleArrowLeft />}
+              color="warning"
             />
           )}
         </Tooltip>
@@ -165,6 +169,7 @@ const Genres = () => {
               startContent={<MdKeyboardArrowLeft />}
               className="disabled:opacity-50"
               disabled
+              color="warning"
             />
           ) : (
             <Button
@@ -172,11 +177,14 @@ const Genres = () => {
               variant="shadow"
               isIconOnly
               startContent={<MdKeyboardArrowLeft />}
+              color="warning"
             />
           )}
         </Tooltip>
 
-        <Button disabled>{currentPage}</Button>
+        <Button disabled color="warning">
+          {currentPage}
+        </Button>
 
         <Tooltip
           content="Avançar"
@@ -192,6 +200,7 @@ const Genres = () => {
               startContent={<MdKeyboardArrowRight />}
               className="disabled:opacity-50"
               disabled
+              color="warning"
             />
           ) : (
             <Button
@@ -199,6 +208,7 @@ const Genres = () => {
               variant="shadow"
               isIconOnly
               startContent={<MdKeyboardArrowRight />}
+              color="warning"
             />
           )}
         </Tooltip>
@@ -217,6 +227,7 @@ const Genres = () => {
               startContent={<MdKeyboardDoubleArrowRight />}
               className="disabled:opacity-50"
               disabled
+              color="warning"
             />
           ) : (
             <Button
@@ -224,6 +235,7 @@ const Genres = () => {
               variant="shadow"
               isIconOnly
               startContent={<MdKeyboardDoubleArrowRight />}
+              color="warning"
             />
           )}
         </Tooltip>
