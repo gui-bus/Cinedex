@@ -2,6 +2,7 @@
 import MovieCard from "@/components/Card";
 import Footer from "@/components/Footer";
 import Loading from "@/components/Loading";
+import TvCard from "@/components/TvCard";
 import { BASE_URL } from "@/utils/Const";
 import { Button, Tooltip } from "@nextui-org/react";
 import axios from "axios";
@@ -22,9 +23,17 @@ export interface Imovie {
   release_date: string;
 }
 
+export interface ITv {
+  id: string;
+  name: string;
+  poster_path: string;
+  first_air_date: string;
+}
+
 const Search = () => {
   const [title, setTitle] = useState("");
   const [movies, setMovies] = useState([]);
+  const [tv, setTv] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPage, setTotalPage] = useState(1);
   const [limitPage, setLimitPage] = useState(1);
@@ -63,6 +72,22 @@ const Search = () => {
       })
       .then((response) => {
         setMovies(response.data.results);
+        setCurrentPage(response.data.page);
+        setTotalPage(response.data.total_pages);
+      })
+      .catch((error) => console.log(error));
+
+    axios
+      .get(`${BASE_URL}/search/tv`, {
+        params: {
+          api_key: process.env.NEXT_PUBLIC_API_KEY,
+          query: id,
+          page,
+          language: "pt-BR",
+        },
+      })
+      .then((response) => {
+        setTv(response.data.results);
         setCurrentPage(response.data.page);
         setTotalPage(response.data.total_pages);
       })
@@ -113,9 +138,8 @@ const Search = () => {
       <h2 className="text-2xl tracking-tighter font-semibold text-center">
         {title}
       </h2>
-      {movies.length === 0 && (
+      {movies.length === 0 && tv.length === 0 && (
         <>
-          <Loading />
           <p className="flex items-center justify-center text-center">
             Infelizmente não foi encontrado nenhum resultado para a sua
             pesquisa.
@@ -131,6 +155,15 @@ const Search = () => {
             id={movie.id}
             title={movie.title}
             release_date={movie.release_date}
+          />
+        ))}
+        {tv.map((TV: ITv) => (
+          <TvCard
+            key={TV.id}
+            img={TV.poster_path}
+            id={TV.id}
+            name={TV.name}
+            first_air_date={TV.first_air_date}
           />
         ))}
       </section>

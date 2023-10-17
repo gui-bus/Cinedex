@@ -2,6 +2,7 @@
 import MovieCard from "@/components/Card";
 import Footer from "@/components/Footer";
 import Loading from "@/components/Loading";
+import TvCard from "@/components/TvCard";
 import { BASE_URL } from "@/utils/Const";
 import { Button, Divider, Tooltip } from "@nextui-org/react";
 import axios from "axios";
@@ -20,7 +21,7 @@ export interface Imovie {
   poster_path: string;
   title: string;
   release_date: string;
-  name:string;
+  name: string;
   first_air_date: string;
 }
 
@@ -30,7 +31,6 @@ const Discover = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPage, setTotalPage] = useState(1);
   const [limitPage, setLimitPage] = useState(1);
-  const [discover, setDiscover] = useState("");
 
   const mainRef = useRef<HTMLDivElement>(null);
 
@@ -45,35 +45,10 @@ const Discover = () => {
       behavior: "smooth",
     });
 
-    const id = params.id.toString();
     const page = searchParams.get("page");
 
-    setDiscover(id);
-
-    switch (id) {
-      case "now_playing":
-        setTitle("Filmes em Cartaz");
-        break;
-
-      case "popular":
-        setTitle("Filmes Populares");
-        break;
-
-      case "top_rated":
-        setTitle("Filmes mais bem avaliados");
-        break;
-
-      case "upcoming":
-        setTitle("Filmes que estreiam em breve");
-        break;
-
-      default:
-        setTitle("");
-        break;
-    }
-
     axios
-      .get(`${BASE_URL}/movie/${id}`, {
+      .get(`https://api.themoviedb.org/3/trending/tv/week?language=en-US`, {
         params: {
           api_key: process.env.NEXT_PUBLIC_API_KEY,
           page,
@@ -119,7 +94,7 @@ const Discover = () => {
         break;
     }
 
-    router.push(`/discover/${discover}?${page}`);
+    router.push(`/discover/tv?${page}`);
   };
 
   return (
@@ -128,19 +103,19 @@ const Discover = () => {
       ref={mainRef}
     >
       <h2 className="text-2xl tracking-tighter font-semibold text-center">
-        {title}
+        Séries em alta
       </h2>
-      
+
       {movies.length === 0 && <Loading />}
 
       <section className="flex flex-wrap items-center justify-center gap-y-4 py-5">
         {movies.map((movie: Imovie) => (
-          <MovieCard
+          <TvCard
             key={movie.id}
             img={movie.poster_path}
             id={movie.id}
-            title={movie.title}
-            release_date={movie.release_date}
+            name={movie.name}
+            first_air_date={movie.first_air_date}
           />
         ))}
       </section>
