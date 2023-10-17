@@ -1,12 +1,12 @@
 
-# Cinedex - Seu catálogo definitivo de filmes e séries! 🎥
+# Cinedex - Seu catálogo definitivo de filmes e series! 🎥
 <div align="center">
   <img src="https://github.com/gui-bus/Cinedex/blob/main/github/desktop_home_light.png?raw=true" alt="Desktop Homepage" width="700" />
 </div>
 
 ## Cinedex 🎥
 
-***A [Cinedex](https://cinedex.vercel.app/discover/now_playing) é uma plataforma online de catálogo de filmes e séries, desenvolvido com React, Typescript, Next.js, NextUI, Tailwind CSS e Vercel.*** O projeto conta com uma ampla gama de opções de filmes separados por categorias e gêneros, todos fornecidos pela API da ***[TheMovieDB](https://www.themoviedb.org/?language=pt)***.
+***A [Cinedex](https://cinedex.vercel.app/discover/now_playing) é uma plataforma online de catálogo de filmes e series, desenvolvido com React, Typescript, Next.js, NextUI, Tailwind CSS e Vercel.*** O projeto conta com uma ampla gama de opções de filmes separados por categorias e gêneros, todos fornecidos pela API da ***[TheMovieDB](https://www.themoviedb.org/?language=pt)***.
 
 ***Venha explorar a Cinedex e encontrar informações do seu filme favorito!*** :star:
 
