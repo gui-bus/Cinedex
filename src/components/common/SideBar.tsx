@@ -4,8 +4,6 @@ import { Divider, Link } from "@nextui-org/react";
 import axios from "axios";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { ScrollArea } from "../ui/scroll-area";
-import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 
 interface Igenre {
@@ -28,7 +26,7 @@ const SideBar = ({ className }: any) => {
         );
         setGenres(response.data.genres);
       } catch (err) {
-        console.log("Erro(NavBar): " + err);
+        console.log("Erro(Sidebar): " + err);
       }
     };
 
@@ -42,7 +40,7 @@ const SideBar = ({ className }: any) => {
 
       if (genreQueryParam) {
         setSelectedGenre(genreQueryParam);
-      } else {
+      } else if (idParam !== undefined) {
         setSelectedGenre(idParam.toString());
       }
     };
@@ -98,7 +96,18 @@ const SideBar = ({ className }: any) => {
                 Melhores avaliações
               </Link>
             </Button>
+            <Button variant="ghost" className="w-full" size="sm">
+              <Link
+                color="foreground"
+                className="w-full text-tiny justify-center hover:bg-zinc-400/20 p-2 rounded-lg"
+                href="/discover/tv"
+                size="lg"
+              >
+                Séries em alta
+              </Link>
+            </Button>
           </div>
+         
         </div>
         <Divider className="my-2" />
         <div className="py-2">

@@ -271,6 +271,17 @@ export default function NavBar() {
                 Melhores avaliações
               </Link>
             </NavbarMenuItem>
+            <NavbarMenuItem className="hover:bg-stone-400/30 p-1 rounded-lg w-full">
+              <Link
+                color="foreground"
+                className="w-full justify-center"
+                href="/discover/tv"
+                size="lg"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Séries em alta
+              </Link>
+            </NavbarMenuItem>
           </div>
 
           <Divider className="my-5" />
