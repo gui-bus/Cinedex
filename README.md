@@ -30,13 +30,13 @@
 ## Tecnologias utilizadas :dart:
 
 <div>
-<img alt="React" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/React.svg"> 
-<img alt="Typescript" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/Typescript.svg">
-<img alt="NextJS" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/NextJS.svg"> 
-<img alt="NextUI" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/NextUI.svg"> 
-<img alt="Tailwind" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/TailwindCSS.svg"> 
-<img alt="Vercel" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/Vercel.svg"> 
-<img alt="TMDB" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/TMDB.svg"> 
+    <img alt="React" height="80" width="80" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/React.svg">
+    <img alt="Typescript" height="80" width="80" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/Typescript.svg">
+    <img alt="NextJS" height="80" width="80" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/NextJS.svg">
+    <img alt="NextUI" height="80" width="80" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/NextUI.svg">
+    <img alt="Tailwind" height="80" width="80" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/TailwindCSS.svg">
+    <img alt="Vercel" height="80" width="80" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/Vercel.svg">
+    <img alt="TMDB" height="80" width="80" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/TMDB.svg">
 </div>
 
 ## Galeria :camera:
@@ -85,15 +85,17 @@ Gostaria de contribuir para o projeto? ***Fico muito grato pelo interesse!***
 
 ## Redes sociais para contato! :speech_balloon:
 
+
 <a href="https://www.instagram.com/guibus_dev/" target="_blank">
-<img alt="Instagram" height="80" width="80"  src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/8ac0d3ecfdd7d999edba6b224e82f0aafd6d424c/Icons/Instagram.svg"> 
+	<img alt="Instagram" height="60" width="60"  src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/Instagram.svg"> 
 </a>
 <a href="https://www.linkedin.com/in/gui-bus/" target="_blank">
-<img alt="LinkedIn" height="80" width="80"  src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/Linkedin.svg"> 
+	<img alt="LinkedIn" height="60" width="60"  src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/Linkedin.svg"> 
 </a>
 <a href="mailto:guibus.dev@gmail.com" target="_blank">
-<img alt="Gmail" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/Gmail.svg"> 
+	<img alt="Gmail" height="60" width="60" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/Gmail.svg"> 
 </a>
+
 
 ## Precisa de uma pagina personalizada para o seu negócio? :rocket:
 
