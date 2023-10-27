@@ -86,7 +86,7 @@ Gostaria de contribuir para o projeto? ***Fico muito grato pelo interesse!***
 ## Redes sociais para contato! :speech_balloon:
 
 <a href="https://www.instagram.com/guibus_dev/" target="_blank">
-<img alt="Instagram" height="53" width="53"  src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/b4edab67273017f06bd2181949cd4deae30e604b/Icons/Instagram.svg"> 
+<img alt="Instagram" height="50" width="50"  src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/b4edab67273017f06bd2181949cd4deae30e604b/Icons/Instagram.svg"> 
 </a>
 <a href="https://www.linkedin.com/in/gui-bus/" target="_blank">
 <img alt="LinkedIn" height="50" width="50"  src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/Linkedin.svg"> 
