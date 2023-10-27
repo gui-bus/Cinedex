@@ -29,14 +29,14 @@
 
 ## Tecnologias utilizadas :dart:
 
-<div style="display: inline_block"><br>
-  <img align="center" alt="React" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/react/react-original.svg"> &nbsp;&nbsp;
-  <img align="center" alt="Typescript" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/typescript/typescript-plain.svg">
- &nbsp;&nbsp;
-  <img align="center" alt="NextJS" height="50" width="50" src="https://www.datocms-assets.com/75941/1657707878-nextjs_logo.png"> &nbsp;&nbsp;
-   <img align="center" alt="NextUI" height="50" width="50" src="https://github.com/nextui-org/nextui/blob/main/apps/docs/public/isotipo.png?raw=true"> &nbsp;&nbsp;
-  <img align="center" alt="Tailwind" height="50" width="60" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/tailwindcss/tailwindcss-plain.svg"> &nbsp;&nbsp;
-   <img align="center" alt="Vercel" height="50" width="60" src="https://www.svgrepo.com/show/361653/vercel-logo.svg"> &nbsp;&nbsp;
+<div>
+<img alt="React" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/React.svg"> 
+<img alt="Typescript" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/Typescript.svg">
+<img alt="NextJS" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/NextJS.svg"> 
+<img alt="NextUI" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/NextUI.svg"> 
+<img alt="Tailwind" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/TailwindCSS.svg"> 
+<img alt="Vercel" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/Vercel.svg"> 
+<img alt="TMDB" height="80" width="80" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/TMDB.svg"> 
 </div>
 
 ## Galeria :camera:
@@ -85,10 +85,15 @@ Gostaria de contribuir para o projeto? ***Fico muito grato pelo interesse!***
 
 ## Redes sociais para contato! :speech_balloon:
 
-[![LinkedIn](https://img.icons8.com/color/48/000000/linkedin.png)](https://www.linkedin.com/in/gui-bus/) 
-[![Instagram](https://img.icons8.com/fluency/48/000000/instagram-new.png)](https://www.instagram.com/guibus_dev/)
-[![Gmail](https://img.icons8.com/fluency/48/000000/gmail.png)](mailto:guibus.dev@gmail.com)
-
+<a href="https://www.instagram.com/guibus_dev/" target="_blank">
+<img alt="Instagram" height="53" width="53"  src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/b4edab67273017f06bd2181949cd4deae30e604b/Icons/Instagram.svg"> 
+</a>
+<a href="https://www.linkedin.com/in/gui-bus/" target="_blank">
+<img alt="LinkedIn" height="50" width="50"  src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/Linkedin.svg"> 
+</a>
+<a href="mailto:guibus.dev@gmail.com" target="_blank">
+<img alt="Gmail" height="50" width="50" src="https://raw.githubusercontent.com/gui-bus/Readme-Icons/894fb49c61b27e7cfb358b7b67834d33d4918318/Icons/Gmail.svg"> 
+</a>
 
 ## Precisa de uma pagina personalizada para o seu negócio? :rocket:
 
