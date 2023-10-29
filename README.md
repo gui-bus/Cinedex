@@ -30,13 +30,13 @@
 ## Tecnologias utilizadas :dart:
 
 <div>
-    <img alt="React" height="80" width="80" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/React.svg">
-    <img alt="Typescript" height="80" width="80" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/Typescript.svg">
-    <img alt="NextJS" height="80" width="80" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/NextJS.svg">
-    <img alt="NextUI" height="80" width="80" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/NextUI.svg">
-    <img alt="Tailwind" height="80" width="80" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/TailwindCSS.svg">
-    <img alt="Vercel" height="80" width="80" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/Vercel.svg">
-    <img alt="TMDB" height="80" width="80" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/TMDB.svg">
+    <img alt="React" height="80" width="80" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/React.svg">
+    <img alt="Typescript" height="80" width="80" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/Typescript.svg">
+    <img alt="NextJS" height="80" width="80" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/NextJS.svg">
+    <img alt="NextUI" height="80" width="80" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/NextUI.svg">
+    <img alt="Tailwind" height="80" width="80" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/TailwindCSS.svg">
+    <img alt="Vercel" height="80" width="80" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/Vercel.svg">
+    <img alt="TMDB" height="80" width="80" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/TMDB.svg">
 </div>
 
 ## Galeria :camera:
@@ -87,13 +87,13 @@ Gostaria de contribuir para o projeto? ***Fico muito grato pelo interesse!***
 
 
 <a href="https://www.instagram.com/guibus_dev/" target="_blank">
-	<img alt="Instagram" height="60" width="60"  src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/Instagram.svg"> 
+	<img alt="Instagram" height="60" width="60"  src="https://github.com/gui-bus/TechIcons/blob/main/Dark/Instagram.svg"> 
 </a>
 <a href="https://www.linkedin.com/in/gui-bus/" target="_blank">
-	<img alt="LinkedIn" height="60" width="60"  src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/Linkedin.svg"> 
+	<img alt="LinkedIn" height="60" width="60"  src="https://github.com/gui-bus/TechIcons/blob/main/Dark/Linkedin.svg"> 
 </a>
 <a href="mailto:guibus.dev@gmail.com" target="_blank">
-	<img alt="Gmail" height="60" width="60" src="https://github.com/gui-bus/Tech-Icons/blob/main/Icons/Gmail.svg"> 
+	<img alt="Gmail" height="60" width="60" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/Gmail.svg"> 
 </a>
 
 
